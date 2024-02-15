@@ -20,6 +20,7 @@ public class DeviceController {
 
     @PostMapping(path = "/devices")
     public Device addDevice(@RequestBody Device device) {
+        System.out.println("Get create request");
         return this.deviceRepository.save(device);
     }
 }
